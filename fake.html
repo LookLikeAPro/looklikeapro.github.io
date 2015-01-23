@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html ng-app="ionicApp">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Jerry Zhou's Website</title>
+
+    <script src="js/ionic.bundle.js"></script>
+    <link href="css/ionic.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <link href="css/app.css" rel="stylesheet">
+    <script src="js/app.js"></script>
+  </head>
+
+  <body ng-controller="MainCtrl">
+    <ion-content [delegate-handle="mainScroll"][direction="y"][locking=""][padding="true"][scroll="true"][overflow-scroll="false"][scrollbar-x="100%"][scrollbar-y="5000px"][start-y="0"][has-bouncing="true"]>
+      <div class="noise" style="width: 100%; height: 100%;">
+        <div id="Header" class="bar header noise">
+          <div style="width:38%;margin-left:10%;overflow:hidden; white-space:nowrap;"><h1>Jerry Zhou</h1></div>
+          <div id="menu1" class="headerItem">
+            <button ng-click="scrollTo('About')" class="button button-clear button-dark icon ion-clipboard">About</button>
+          </div>
+          <div id="menu2" class="headerItem">
+            <button ng-click="scrollTo('Education')" class="button button-clear button-dark icon ion-briefcase">Education</button>
+          </div>
+          <div id="menu3" class="headerItem">
+            <button ng-click="scrollTo('Activities')" class="button button-clear button-dark icon ion-lightbulb">Activities</button>
+          </div>
+          <div id="menu4" class="headerItem" style="margin-right: 10%">
+            <button ng-click="scrollTo('Contact')" class="button button-clear button-dark icon ion-wifi">Contact</button>
+          </div>
+        </div>
+    <!--================================================================================================================================================================-->
+        <div id="About" ng-click="scrollTo('About')" class="contentBox" style="height:400px">
+          <div id="About-head" class="colorStrip" style="background-color:red;"></div>
+          <div class="content"><h2>About</h2></div>
+          <hr class="divider">
+          <div class="card">
+            <div style="width:3px; height: 200px; position:absolute; left:0px; top:28px; background-color:cyan"></div>
+            <h3 style="position:absolute; left: 10px; top: 10px; color:#ffffff">Jerry Zhou</h3>
+          </div>
+          <button ng-click="scrollTo('Header')" class="button button-outline button-dark icon-right ion-chevron-right">Resume</button>
+        </div>
+
+    <!--================================================================================================================================================================-->
+        <div id="Education" ng-click="scrollTo('Education')" class="contentBox" style="height:400px">
+          <div id="Education-head" class="colorStrip" style="background-color:red;"></div>
+          <div class="content"><h1>Education</h1></div>
+          <hr class="divider">
+        </div>
+
+    <!--================================================================================================================================================================-->
+        <div id="Activities" ng-click="scrollTo('Activities')" class="contentBox" style="height:400px">
+          <div id="Activities-head" class="colorStrip" style="background-color:red;"></div>
+          <div class="content"><h1>Activities</h1></div>
+          <hr class="divider">
+          <div style="width:100%; height:100%">
+          <div><button ng-click="previous()" class="button button-light icon ion-chevron-left scrollButton" style="left:0%"></button></div>
+          <ion-slide-box does-continue="true" show-pager="false">
+            <ion-slide>
+              <div class="scrollPage">
+                Slide 1
+              </div>
+            </ion-slide>
+            <ion-slide>
+              <div class="scrollPage">
+                Slide 2
+              </div>
+            </ion-slide>
+            <ion-slide>
+              <div class="scrollPage">
+                Slide 3
+              </div>
+            </ion-slide>
+            <ion-slide>
+              <div class="scrollPage">
+                Slide 4
+              </div>
+            </ion-slide>
+          </ion-slide-box>
+          <div><button ng-click="next()" class="button button-light icon ion-chevron-right scrollButton" style="left:96%"></button></div>
+          </div>
+        </div>
+
+    <!--================================================================================================================================================================-->
+        <div id="Contact" ng-click="scrollTo('Contact')" class="contentBox" style="height:400px">
+          <div id="Contact-head" class="colorStrip" style="background-color:red;"></div>
+          <div class="content"><h1>Contact</h1></div>
+          <hr class="divider">
+        </div>
+        <div id="Footer" class="bar footer noise">
+          <p>test</p><p>test</p>
+        </div>
+
+    <!--================================================================================================================================================================-->
+      </div>
+    </ion-content>
+  </body>
+
+</html>
