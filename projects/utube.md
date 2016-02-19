@@ -3,7 +3,7 @@ layout: page
 permalink: /projects/utube/
 ---
 
-#uTube app
+# uTube app
 
 Frustrated with the default youtube app, I developed utube as a hybrid mobile app to watch videos
 

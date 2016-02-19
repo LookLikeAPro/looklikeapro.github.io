@@ -2,7 +2,7 @@
 layout: post
 title:  "Django OneToMany Relationship Clarification"
 date:   2016-01-1 22:11:40 -0500
-categories: jekyll update
+categories: posts
 ---
 Newcomers to Django might notice something strange about Django model relations. There is `model.ForeignKey` which represents many-to-one relationship, `model.ManyToManyField` which is the many-to-many relationship, but there is no one-to-many relationship!
 

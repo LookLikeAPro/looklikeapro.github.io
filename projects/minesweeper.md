@@ -3,7 +3,7 @@ layout: page
 permalink: /projects/minesweeper/
 ---
 
-#Minesweeper
+# Minesweeper
 
 A minesweeper clone made as a java applet.
 

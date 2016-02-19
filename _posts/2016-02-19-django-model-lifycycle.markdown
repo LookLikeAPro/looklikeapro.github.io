@@ -2,7 +2,7 @@
 layout: post
 title:  "Django Model Lifecycle"
 date:   2016-02-18 22:11:40 -0500
-categories: jekyll update
+categories: posts
 ---
 Django model lifecycle is too often misunderstood as a nonexistent feature.
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "A Look At Server Hosting with Cloudatcost"
 date:   2015-08-01 22:11:40 -0500
-categories: jekyll update
+categories: posts
 ---
 It is unusual that a company would go out of its way to undercut its competitors' prices by an order of magnitude, but this is exactly what Cloudatcost, a subsidiary of Fibreoptics did.
 

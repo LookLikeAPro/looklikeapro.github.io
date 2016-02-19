@@ -2,7 +2,7 @@
 layout: post
 title:  "Web Apps with ReactJS and Laravel"
 date:   2015-09-01 22:11:40 -0500
-categories: jekyll update
+categories: posts
 ---
 I like scaffolding applications, so I decided to make something cool. It took a lot longer than I had hoped, but the end result made it all worthwhile.
 
@@ -43,13 +43,13 @@ The goals of the project:
     The web app should share the same API as mobile and desktop apps, that almost certainly implies using JSON as the API interface and not doing any funny partial html stuff.
 
 
-##Finalized App
+## Finalized App
 
 Here is a rough layout of the app:
 
 ![dependency-map.jpg](/assets/react-laravel-dep.png)
 
-###React Flux Frontend
+### React Flux Frontend
 
 ReactJS becomes the frontend framework of choice because of its speed and code reusability (components). React comes with great documentation and conventions that makes it hard to write bad code. My go-to front end framework is still AngularJS, but making a web app without angular features such as dependency injection and two-way binding is good programming practice and a worthy challenge for myself.
 
@@ -57,7 +57,7 @@ ReactJS is also one of the few frameworks capable of prerendering. With NodeJS, 
 
 The app uses Flux architecture for the frontend, which is a one way data flow that works like a minimalistic MVC. Instead of worrying about callbacks / promises, stores can provide synchonous access to data, greatly reducing frontend code complexity. I could go on about how great it is but [Facebook explains it better](https://facebook.github.io/flux/docs/overview.html).
 
-###Webpack (frontend build system + live reloading)
+### Webpack (frontend build system + live reloading)
 
 The app uses Webpack as the build system. Whether it is css, less, jsx, js, coffeescript, html, webpack always sorts out the dependency, does preprocessing (babel and autoprefixer are the important ones for me) and builds properly. The stats-webpack-plugin even generates a file that gives insight to the the current build's dependency, size, speed, etc to help optimize. 
 
@@ -94,7 +94,7 @@ With this setup, any container/page that I write down in `client-app/containers/
 
 The main app bundle includes core pages, models and a few libraries, which is easily kept under 500kb for a reasonable app.
 
-###Coupled client and server
+### Coupled client and server
 
 As mentioned earlier, "Tighter coupling of client and server" sounds dumb, but in a prerendered site where they work closely together, it makes sense. Fortunately I was able to organize the folders in an reasonable way.
 
@@ -110,13 +110,13 @@ As mentioned earlier, "Tighter coupling of client and server" sounds dumb, but i
     storage            //laravel caches
     tests              //phpunit API tests
 
-###Laravel
+### Laravel
 
 The app uses Laravel as the backend, and NodeJS as the aid to do react prerender. The existence of Node is confusing for the developer, so I hid its existence as much as possible. There are two "margic folders" which contain Node and React configurations to handle prerendering, which are not touched during development. As for running webpack tasks, they are bundled into a symphony command, so developers can work on the project without having anything to do with Node.
 
 The app has two modes: prerendered production site, and live reloaded dev site. Bundled commands such as `php artisan serve:bundle live` (runs live-reloaded dev site) and `php artisan serve:bundle prod` (runs prerendered prodcution site) abstract away unpleasant steps such as switching php app environment and using Node. 
 
-###Prerendering
+### Prerendering
 
 Here is the procedure for prerendering and a bad illustration to go along with it.
 
@@ -143,7 +143,7 @@ When the above information is turned over to client side, html and css will comp
 
 The process of prerendering ended up being very roundabout, but the good thing is - prerendering is optional. For any information that the client side app wants and does not have, it will just make an extra API call. I can prerender information on the page if I want, but it is not necessary and not a slow down to development. 
 
-###Live DEV Site
+### Live DEV Site
 
 Webpack's hot dev server extension caches the app bundle and watches for changes, only reloading parts of the app that changed.
 
@@ -169,4 +169,4 @@ The laravel side of things is extremely simple in this case, just pipe stuff ove
         }, 200, []);
     }
 
-###[Bonus round - previous failed attempts](/how-not-to-build-web-apps)
+### [Bonus round - previous failed attempts](/how-not-to-build-web-apps)

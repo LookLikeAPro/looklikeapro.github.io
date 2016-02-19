@@ -2,7 +2,7 @@
 layout: post
 title:  "ESLint Rules for React"
 date:   2015-09-15 22:11:40 -0500
-categories: jekyll update
+categories: posts
 ---
 This is my ESLint rules for working with ReactJS.
 The order of rules is roughly from code convention preference to draconian restrictions that discourage potentially bad/confusing code.

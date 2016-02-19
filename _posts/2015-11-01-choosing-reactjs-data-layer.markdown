@@ -2,23 +2,23 @@
 layout: post
 title:  "Choosing a ReactJS Data Layer"
 date:   2015-11-01 22:11:40 -0500
-categories: jekyll update
+categories: posts
 ---
 ReactJS components is powerful and quick for the front end, but unlike competing frameworks such as Ember, Angular and Backbone, React is not a complete solution. React components are Views in the traditional sense of Model-View-Controller, but it is up to the developers to implement the data layer for their apps.
 
 Facebook recommends the flux pattern, condemning the MVC pattern for the exponential growth in complexity for larger apps. The most enticing part of flux for me is that the data layer is completely synchronous. With the exception of the API module, all the services / stores have completely predictable behaviours. No callbacks and promises to deal with! If this does not excite you, I don't know what you are looking for.
 
-##[Flux pattern](https://facebook.github.io/flux/docs/overview.html)
+## [Flux pattern](https://facebook.github.io/flux/docs/overview.html)
 
 Flux pattern introduces stores and actions to manage data for react components. This is according to React's one-way data flow philosophy. Data can only flow in one direction from `store -> component tree`. For react presentation layer to affect change to store, it will dispatch an action. Stores can listen to actions and make changes accordingly.
 
 ![flux](/assets/flux/flux-simple-diagram.png)
-######Image by Facebook
+###### Image by Facebook
 
 This data flow can be applied to the API layer as well. The API listens for requests from components, makes the API call, and dispatches a "payload" action when the data is received. Stores would listen to the payload and make changes to their state.
 
 ![flux-with-api](/assets/flux/flux-diagram.png)
-######Image by Facebook
+###### Image by Facebook
 
 In my experience, Facebook's flux implementation is good at its job. The one way data flow makes it easy to track state changes within the app, and hard to write bad code and anti-pattern. 
 
@@ -63,12 +63,12 @@ However, the implementation has the following downsides:
 2. Flux does not help the developer deal with asynchronous tasks. Implementing the asynchronous API layer introduced a lot of redundancy into my application. This is because both stores and API ned to know the API keys to communicate with each other. Notice the insane dependency to constants in my app.
 ![flux](/assets/flux/flux-app-dependency-diagram.png)
 
-##[Items-store pattern](http://github.com/webpack/items-store)
+## [Items-store pattern](http://github.com/webpack/items-store)
 
 Webpack has a neat project by the name of items-store, which they call "A simple flux-like architecture with a syncing items store". It has not received much attention (45 start on Github) compared to other solutions, but I think it is versatile enough to find its place in any application. This architecture basically calls for removing the emphasis from grouping data into stores, instead encapsulating each piece of data in a item-store object.
 
 ![items-store-pattern](/assets/flux/items-store-diagram.png)
-######Image by Webpack
+###### Image by Webpack
 
 Often when using the flux architecture, I find that each piece of data needs the following functions:
 
@@ -82,9 +82,9 @@ Items-store basically helps create an object, encapsulating the data and offerin
 
 However, the pattern has an obvious weakness. Each piece of data, regardless of if it is a pagination of entries, or just the current user's name, are all encapsulated and rather isolated from one another. App logic is unintuitive as it tries to manage the relation between different itemstores.
 
-##Flux-like patterns
+## Flux-like patterns
 
-###[Fluxxor](http://github.com/BinaryMuse/fluxxor)
+### [Fluxxor](http://github.com/BinaryMuse/fluxxor)
 
 Fluxxor looks like a reasonable implementation of flux that simplifies some ugly parts of original flux. There is no need to register components with stores using EventEmitter - there is a mixin to handle it. There is no need to make a dispatcher - the stores automatically listen to actions.
 
@@ -92,7 +92,7 @@ However, mixins are being deprecated as React moves towards ES6 syntax. I don't 
 
 Disclaimer: I never used Fluxxor - this is only my first impression.
 
-###[Reflux](http://github.com/reflux/refluxjs)
+### [Reflux](http://github.com/reflux/refluxjs)
 
 Reflux is a implementation of flux that, similar to Fluxxor, simplifies and abstracts away the action dispatcher. Creating actions with Reflux is no longer a function, instead each action is an object. This is more restrictive but allows for callbacks upon finished an async action - greatly helping reduce the redundancy of API.
 
@@ -107,7 +107,7 @@ Example:
 			.catch( this.failed );
 	});
 
-###[Redux](http://github.com/rackt/redux)
+### [Redux](http://github.com/rackt/redux)
 
 Unlike the previous two, Redux is closer to a complete rework of flux. Here are the key differences:
 
@@ -119,7 +119,7 @@ Unlike the previous two, Redux is closer to a complete rework of flux. Here are 
 
 This pattern is groundbreaking and yet completely reasonable. I am in the process of migrating my app from Facebook flux to Redux.
 
-##Other Patterns
+## Other Patterns
 
 Does flux make you hate life? Maybe it is time to rethink...  [This guide](http://github.com/planningcenter/flux-patterns) offers some good suggestions about when to use and not use flux. Going over the checklist may save days of dev time if your project is not large or quality obsessed. 
 

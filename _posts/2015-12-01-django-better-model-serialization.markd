@@ -2,7 +2,7 @@
 layout: post
 title:  "Django Better Model Serialization"
 date:   2015-12-01 22:11:40 -0500
-categories: jekyll update
+categories: posts
 ---
 The Django model serializer is absolutely brutal. Look at the code below:
 
@@ -16,7 +16,7 @@ Ideally, we emulate the elegant behaviour of Rails models, where returning a mod
 
 I have tried two solutions personally.
 
-###1. Convert Model to Dictionary
+### 1. Convert Model to Dictionary
 
 The first step is to define a model to dictionary helper function. Dictionaries are much more friendly than model to work with when generating a response.
 
@@ -64,6 +64,6 @@ Now, working with models is way more sane than before.
 	//return using JsonResponse
 	return JsonResponse(transaction)
 
-###2. Middleware
+### 2. Middleware
 
 Not complete yet. The idea is to create a middleware which intercepts responses. Whenver a model or array of models is seen, automatically call `to_dict` on each one.

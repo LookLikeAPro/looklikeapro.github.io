@@ -3,7 +3,7 @@ layout: page
 permalink: /projects/studentcarshareapp/
 ---
 
-#Student CarShare mobile app
+# Student CarShare mobile app
 
 [Han Chen](http://chen-han.github.io) and I developed the mobile app for [Student CarShare](http://www.studentcarshare.ca).
 
