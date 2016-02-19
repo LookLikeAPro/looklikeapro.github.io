@@ -1,0 +1,11 @@
+# Site settings
+title: Jerry Zhou - Opinionated Development
+email: contact@jerryzhou.net
+description: > # this means to ignore newlines until "baseurl:"
+  A website about things
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://jerryzhou.net" # the base hostname & protocol for your site
+github_username:  looklikeapro
+
+# Build settings
+markdown: kramdown

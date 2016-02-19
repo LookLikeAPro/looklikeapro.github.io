@@ -3,5 +3,8 @@
 # Example .gitignore files: https://github.com/github/gitignore
 
 .ftpsync_settings
-**/.DS_Store
 .idea/
+_site
+.sass-cache
+.jekyll-metadata
+.DS_Store
