@@ -13,11 +13,13 @@ Facebook recommends the flux pattern, condemning the MVC pattern for the exponen
 Flux pattern introduces stores and actions to manage data for react components. This is according to React's one-way data flow philosophy. Data can only flow in one direction from `store -> component tree`. For react presentation layer to affect change to store, it will dispatch an action. Stores can listen to actions and make changes accordingly.
 
 ![flux](/assets/flux/flux-simple-diagram.png)
+
 ###### Image by Facebook
 
 This data flow can be applied to the API layer as well. The API listens for requests from components, makes the API call, and dispatches a "payload" action when the data is received. Stores would listen to the payload and make changes to their state.
 
 ![flux-with-api](/assets/flux/flux-diagram.png)
+
 ###### Image by Facebook
 
 In my experience, Facebook's flux implementation is good at its job. The one way data flow makes it easy to track state changes within the app, and hard to write bad code and anti-pattern. 
@@ -68,6 +70,7 @@ However, the implementation has the following downsides:
 Webpack has a neat project by the name of items-store, which they call "A simple flux-like architecture with a syncing items store". It has not received much attention (45 start on Github) compared to other solutions, but I think it is versatile enough to find its place in any application. This architecture basically calls for removing the emphasis from grouping data into stores, instead encapsulating each piece of data in a item-store object.
 
 ![items-store-pattern](/assets/flux/items-store-diagram.png)
+
 ###### Image by Webpack
 
 Often when using the flux architecture, I find that each piece of data needs the following functions:
