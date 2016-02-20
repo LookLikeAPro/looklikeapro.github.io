@@ -13,5 +13,5 @@ kramdown:
   input: GFM
   hard_wrap: false
 permalink: /:categories/:title/
-gems:
-  - jekyll-sitemap
+# gems:
+#   - jekyll-sitemap
