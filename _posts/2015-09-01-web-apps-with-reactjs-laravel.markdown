@@ -65,9 +65,9 @@ A surpringly powerful feature is the webpack-hot-reload extension, which caches 
 
 I passed up one webpack feature - modularized css, because I believe css should be what it is - a cascading style sheet, not a component-specific / scoped styling descriptor.
 
-I give credits to [react-starter](https://github.com/webpack/react-starter) for their Webpack configuration, which I modified to fit my needs. Alternatively, [here](http://christianalfoni.github.io/javascript/2014/08/15/react-js-workflow.html) is a gulp approach for people who can't get behind Webpack.
+I give credits to [react-starter](https://github.com/webpack/react-starter) for their Webpack configuration, which I modified to fit my needs. Alternatively, [here](http://christianalfoni.github.io/javascript/2014/08/15/react-js-workflow.html) is a gulp approach for people who can't get behind Webpack.
 
-###Light client-side bundle
+### Light client-side bundle
 
 "react-proxy-loader" is a powerful webpack module loader that allows the configuration of less commonly used modules of the app to be packed in separate bundles. For example, the "about" page of the app can be as large as I want and not slow down the rest of the app.
 

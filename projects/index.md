@@ -18,6 +18,15 @@ permalink: /projects/
 
 <br />
 
+## 2016
+<br />
+
+### [TurboWebsite](https://github.com/LookLikeAPro/Turbowebsite)
+- Drop-in website script that turns regular websites into performant virtual-dom single page apps.
+- Used at [this current website](https://github.com/LookLikeAPro/looklikeapro.github.io), a jekyll website with zero configuration.
+
+<br />
+
 ## 2015
 <br />
 
@@ -71,12 +80,16 @@ permalink: /projects/
 
 ### [Angular2-React](https://github.com/LookLikeAPro/Angular2-React)
 
+### [Virtual-hyperscript-parser](https://github.com/LookLikeAPro/virtual-hyperscript-parser)
+
 ### [Minesweeper in Java](/projects/minesweeper)
 
 ### [University of Waterloo Food CLI](http://github.com/LookLikeAPro/UWFoodCLI)
 
+<div style="display: none">
 ### [CORS Proxy](http://github.com/LookLikeAPro/CORSProxy2)
 
 ### [Equation Solver](http://github.com/LookLikeAPro/Interpreter)
 
 ### [VEX Robot](/projects/vex-robot)
+</div>
