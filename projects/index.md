@@ -21,9 +21,22 @@ permalink: /projects/
 ## 2016
 <br />
 
+### [Python Package Manager](https://github.com/LookLikeAPro/PPM)
+- A python package manager that addresses problems with existing tools (pip).
+- Sees production use in personal python projects.
+
 ### [TurboWebsite](https://github.com/LookLikeAPro/Turbowebsite)
 - Drop-in website script that turns regular websites into performant virtual-dom single page apps.
 - Used at [this current website](https://github.com/LookLikeAPro/looklikeapro.github.io), a jekyll website with zero configuration.
+
+### [Angular2-React](https://github.com/LookLikeAPro/Angular2-React)
+- Angular2 component that embeds ReactJS components
+
+### [Virtual-hyperscript-parser](https://github.com/LookLikeAPro/virtual-hyperscript-parser)
+- Javascript library that compiles raw html to a virtual hyperscript structure for DOM diffing
+
+### [HoverTiles](https://github.com/LookLikeAPro/HoverTiles)
+- A ReactJS component
 
 <br />
 
@@ -44,6 +57,9 @@ permalink: /projects/
 ### Crack
 - Mobile chat app using socket.io that translates chat message to the preferred language. Supports images and group chats.
 - Finished with 2 man team under 16 hours in a hackathon.
+
+### Gameshow
+- A web interface and genesys phone answering system that lets users play trivia games over the phone.
 
 <br />
 
@@ -75,12 +91,6 @@ permalink: /projects/
 ## Miscellaneous
 
 <br />
-
-### [HoverTiles](https://github.com/LookLikeAPro/HoverTiles)
-
-### [Angular2-React](https://github.com/LookLikeAPro/Angular2-React)
-
-### [Virtual-hyperscript-parser](https://github.com/LookLikeAPro/virtual-hyperscript-parser)
 
 ### [Minesweeper in Java](/projects/minesweeper)
 
