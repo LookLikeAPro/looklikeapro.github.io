@@ -16,10 +16,6 @@ I am Jerry Zhou, a software developer currently studying CS at University of Wat
 - Hackathons
 - Make robots
 
-## Resume
-
-[View](/resume) - last updated: Sept. 2015
-
 ## Contact
 
 - [LinkedIn](https://ca.linkedin.com/pub/jerry-zhou/5b/a17/a12)
