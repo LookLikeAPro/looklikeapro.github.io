@@ -11,19 +11,19 @@ permalink: /projects/
 
 ### [Solanum.io](https://solanum.io)
 - A web app to purchase food from local farms
-- Adopts latest frontend technologies in React.
 
-### FreeForAll
-- An android and iOS multiplayer game
+### [Verne](https://looklikeapro.gitbooks.io/verne/content/)
+- An automatic and customizable REST API connector.
+- Originally designed to work alongside Redux, but generalized to power any flux application or event driven javascript application.
 
 <br />
 
 ## 2016
 <br />
 
-### [Python Package Manager](https://github.com/LookLikeAPro/PPM)
+### [Piton](https://github.com/LookLikeAPro/PPM)
 - A python package manager that addresses problems with existing tools (pip).
-- Sees production use in personal python projects.
+- Well received by community with 500+ downloads, used in personal projects.
 
 ### [TurboWebsite](https://github.com/LookLikeAPro/Turbowebsite)
 - Drop-in website script that turns regular websites into performant virtual-dom single page apps.
@@ -36,7 +36,7 @@ permalink: /projects/
 - Javascript library that compiles raw html to a virtual hyperscript structure for DOM diffing
 
 ### [HoverTiles](https://github.com/LookLikeAPro/HoverTiles)
-- A ReactJS component
+- A flashy ReactJS component
 
 <br />
 

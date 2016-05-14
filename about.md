@@ -14,7 +14,7 @@ I am Jerry Zhou, a software developer currently studying CS at University of Wat
 - Web apps
 - Javascript frameworks, build systems & ES6
 - Hackathons
-- Make robots
+- Hobby microcontroller programming and robots
 
 ## Contact
 
