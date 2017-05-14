@@ -6,7 +6,14 @@ permalink: /projects/
 
 <br />
 
+This section is not being maintained and is not up to date.
+
 ## Ongoing
+<br />
+
+<br />
+
+## 2016
 <br />
 
 ### [Solanum.io](https://solanum.io)
@@ -15,11 +22,6 @@ permalink: /projects/
 ### [Verne](https://looklikeapro.gitbooks.io/verne/content/)
 - An automatic and customizable REST API connector.
 - Originally designed to work alongside Redux, but generalized to power any flux application or event driven javascript application.
-
-<br />
-
-## 2016
-<br />
 
 ### [Piton](https://github.com/LookLikeAPro/PPM)
 - A python package manager that addresses problems with existing tools (pip).
